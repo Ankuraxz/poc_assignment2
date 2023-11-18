@@ -70,7 +70,6 @@ def write_redis(key, value):
         print("Error writing to Redis: {}".format(err_redis))
         raise HTTPException(status_code=500, detail="Error writing to Redis: {}".format(err_redis))
 
-
 def clean_json(data):
     data = data.replace("'", '"')
     data = data.replace("\\", "")
